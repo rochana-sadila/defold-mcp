@@ -1,7 +1,11 @@
 {
   "name": "defold-mcp",
   "version": "0.1.0",
-  "description": "MCP server for controlling a Defold game engine project: read/edit files, build, and run headlessly.",
+  "description": "MCP server giving AI coding agents (Claude Code, OpenCode, Codex) control over Defold game engine projects — inspect, scaffold, edit, build, and test.",
+  "license": "MIT",
+  "keywords": ["mcp", "model-context-protocol", "defold", "game-engine", "ai-agent", "claude-code", "opencode", "codex"],
+  "repository": { "type": "git", "url": "https://github.com/rochana-sadila/defold-mcp.git" },
+  "author": "Rochana Sadila",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
