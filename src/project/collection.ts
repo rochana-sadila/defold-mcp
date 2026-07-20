@@ -309,7 +309,7 @@ export function addComponent(
 
 export function setProperty(
   doc: Doc,
-  opts: { gameObjectId: string; key: string; value: string }
+  opts: { gameObjectId: string; key: string; value: Scalar }
 ): Doc {
   const next = cloneDoc(doc);
   const go = findNode(next, "embedded_instances", opts.gameObjectId);

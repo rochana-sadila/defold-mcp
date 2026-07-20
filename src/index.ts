@@ -176,7 +176,7 @@ server.tool(
       componentId: z.string().optional(),
       componentPath: z.string().optional(),
       key: z.string().optional(),
-      value: z.string().optional(),
+      value: z.union([z.number(), z.string(), z.boolean()]).optional(),
     }),
   },
   safe(async (args: {
@@ -190,7 +190,7 @@ server.tool(
       componentId?: string;
       componentPath?: string;
       key?: string;
-      value?: string;
+      value?: number | string | boolean;
     };
   }) => {
     const oldText = fs.readFileSync(assertInsideRoot(getConfig().projectRoot, args.collectionPath), "utf8");
